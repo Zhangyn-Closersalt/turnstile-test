@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Turnstile
         uses: softprops/turnstyle@v0.1.5
+        with:
+          same-branch-only: false
         env:
           GITHUB_TOKEN: ${{secrets.WEBHOOK_WORKFLOW}}
       - name: Wait
